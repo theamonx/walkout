@@ -1,0 +1,150 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import JobList from '@/components/JobList.vue';
+import { MagnifyingGlassIcon, MapPinIcon } from '@heroicons/vue/24/outline';
+
+import company1 from '@/assets/logos/Vector.svg';
+import company2 from '@/assets/logos/Vector-1.svg';
+import company3 from '@/assets/logos/Vector-2.svg';
+import company4 from '@/assets/logos/Vector-3.svg';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+  <section class="bg-neutral-950 p-24">
+    <h1 class="text-5xl font-bold text-center text-neutral-200">Jobs</h1>
+  </section>
+  <section class="flex p-12">
+    <div class="w-1/4 space-y-4">
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Search By Job Title</h5>
+        <div class="relative">
+          <input class="border rounded-lg border-neutral-600 p-1 pl-8 text-sm" placeholder="Job Title or Company" />
+          <MagnifyingGlassIcon class="size-5 text-neutral-600 absolute left-1 top-1" />
+        </div>
+      </div>
+     <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Location</h5>
+        <div class="relative">
+          <input class="border rounded-lg border-neutral-600 p-1 pl-8 text-sm" placeholder="Chosse City" />
+          <MapPinIcon class="size-5 text-neutral-600 absolute left-1 top-1" />
+        </div>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Category</h5>
+        <div>
+          <input type="checkbox" name="option" value="commerce" class="mr-2" >Commerce<br>
+          <input type="checkbox" name="option" value="telecom" class="mr-2" >Telecommunications<br>
+          <input type="checkbox" name="option" value="hotel" class="mr-2">Hotel & Tourism<br>
+          <input type="checkbox" name="option" value="education" class="mr-2">Education<br>
+          <input type="checkbox" name="option" value="finance" class="mr-2">Financial Services<br>
+        </div>
+      </div>
+        <button class="bg-primary rounded-lg p-2 w-full text-center text-neutral-200 font-bold">Show More</button>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Job Type</h5>
+        <div>
+          <input type="checkbox" name="option" value="commerce" class="mr-2" >Full Time<br>
+          <input type="checkbox" name="option" value="telecom" class="mr-2" >Part Time<br>
+          <input type="checkbox" name="option" value="hotel" class="mr-2">Freelance<br>
+          <input type="checkbox" name="option" value="education" class="mr-2">Seasonal<br>
+          <input type="checkbox" name="option" value="finance" class="mr-2">Fixed Price<br>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Experience Level</h5>
+        <div>
+          <input type="checkbox" name="option" value="commerce" class="mr-2" >No-Experience<br>
+          <input type="checkbox" name="option" value="telecom" class="mr-2" >Fresher<br>
+          <input type="checkbox" name="option" value="hotel" class="mr-2">Intermediate<br>
+          <input type="checkbox" name="option" value="education" class="mr-2">Expert<br>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Date Posted</h5>
+        <div>
+          <input type="checkbox" name="option" value="commerce" class="mr-2" >All<br>
+          <input type="checkbox" name="option" value="telecom" class="mr-2" >Last Hour<br>
+          <input type="checkbox" name="option" value="hotel" class="mr-2">Last 24 Hours<br>
+          <input type="checkbox" name="option" value="education" class="mr-2">Last 7 Days<br>
+          <input type="checkbox" name="option" value="education" class="mr-2">Last 30 Days<br>
+        </div>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Salary</h5>
+        <div class="relative w-full bg-yellow-200 h-2 my-4">
+          <div class="bg-primary w-1/2 h-2 absolute left-0 top-0"></div>
+          <div class="w-8 h-8 bg-primary rounded-full absolute left-0 top-1/2 -translate-y-1/2"></div>
+          <div class="w-8 h-8 bg-primary rounded-full absolute left-1/2 top-1/2 -translate-y-1/2"></div>
+        </div>
+        <div class="flex justify-between py-2 items-center">
+          <p class="font-bold">Salary : <span>$10-$100</span></p><button class="bg-primary p-1 rounded-md text-neutral-200 text-sm font-bold w-20  ">Apply</button>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-lg font-bold text-neutral-800 pb-2">Tags</h5>
+        <div class="flex flex-wrap gap-2 text-neutral-800 text-sm">
+          <div class="bg-primary/40 rounded-full py-1 px-2">engineering</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">design</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">ui/ux</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">marketing</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">management</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">soft</div>
+          <div class="bg-primary/40 rounded-full py-1 px-2">construction</div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="w-3/4">
+      <div class="flex justify-between">
+        <p>Showing 6-6 of 10 results</p>
+        <p class="border border-neutral-600 text-neutral-600 rounded-lg px-2 py-1 text-sm">Sort by Latest </p>
+      </div>
+      <div class="p-8 space-y-8">
+        <JobList/>
+        <div class="flex justify-between">
+          <div class="flex gap-4 text-center">
+            <div class="bg-primary text-neutral-200 rounded-lg p-1 aspect-square">1</div>
+            <div class="text-neutral-600 rounded-lg p-1 border border-neutral-600 aspect-square">2</div>
+          </div>
+        <p class="border border-neutral-600 text-neutral-600 rounded-lg px-2 py-1 text-sm">Next</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-primary/30 p-20">
+        <div class="text-center space-y-4 mb-16">
+            <h1 class="text-4xl font-bold text-neutral-950">Top Company</h1>
+            <p class="line-clamp-1 text-neutral-700 text-sm w-2/3 mx-auto">At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. Lectus dolor blandit massa pretium id ultrices phasellus tortor. Risus risus lectus augue justo lacus viverra sit. Ultricies purus dolor viverra mi laoreet at cursus justo. Ultrices purus diam egestas amet faucibus tempor blandit. Elit velit mauris aliquam est diam. Leo sagittis consectetur diam morbi erat aenean. Vulputate praesent congue faucibus in euismod feugiat euismod volutpat. Adipiscing risus amet phasellus imperdiet eget vel pulvinar.</p>
+        </div>
+        <div class="grid grid-cols-4 gap-8 w-4/5 mx-auto text-sm text-center">
+            <div class="bg-neutral-100 rounded-lg flex flex-col aspect-square justify-center items-center gap-2 p-8">
+              <Image src={company1} alt={"Instagram"} class="h-16 w-16 bg-black p-4 rounded-lg text-primary mb-2" />
+                <h5 class="text-lg font-bold text-neutral-700">Instagram</h5>
+                <p class="text-xs text-neutral-500">Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.</p>
+                <span class="text-primary bg-primary/10 px-2 py-1 rounded-full mt-4">2 Jobs</span>
+            </div>
+            <div class="bg-neutral-100 rounded-lg flex flex-col aspect-square justify-center items-center gap-2 p-8">
+              <Image src={company2} alt={"Tesla"} class="h-16 w-16 bg-black p-4 rounded-lg text-primary mb-2" />
+                <h5 class="text-lg font-bold text-neutral-700">Tesla</h5>
+                <p class="text-xs text-neutral-500">Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.</p>
+                <span class="text-primary bg-primary/10 px-2 py-1 rounded-full mt-4">3 Jobs</span>
+            </div>
+            <div class="bg-neutral-100 rounded-lg flex flex-col aspect-square justify-center items-center gap-2 p-8">
+              <Image src={company3} alt={"McDonals"} class="h-16 w-16 bg-black p-4 rounded-lg text-primary mb-2" />
+                <h5 class="text-lg font-bold text-neutral-700">McDonald's</h5>
+                <p class="text-xs text-neutral-500">Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.</p>
+                <span class="text-primary bg-primary/10 px-2 py-1 rounded-full mt-4">3 Jobs</span>
+            </div>
+            <div class="bg-neutral-100 rounded-lg flex flex-col aspect-square justify-center items-center gap-2 p-8">
+              <Image src={company4} alt={"Apple"} class="h-16 w-16 bg-black p-4 rounded-lg text-primary mb-2" />
+                <h5 class="text-lg font-bold text-neutral-700">Apple</h5>
+                <p class="text-xs text-neutral-500">Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.</p>
+                <span class="text-primary bg-primary/10 px-2 py-1 rounded-full mt-4">3 Jobs</span>
+            </div>
+
+        </div>
+    </section>
+</Layout>
